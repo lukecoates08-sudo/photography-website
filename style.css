@@ -1,0 +1,194 @@
+body {
+    font-family: "Inter";
+    margin: 0;
+    padding-top: 90px;
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 20px 30px;
+    background: white;
+
+    z-index: 1000;
+
+    transition: transform 0.3s ease;
+}
+
+.contact {
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+h1 {
+    margin: 0px 20px;
+    font-weight: 350;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    font-weight:300;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.active {
+    text-decoration: underline;
+}
+
+#dont-contact {
+    display: flex;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    margin: 0;
+}
+
+img {
+    width: 50%;
+    height: auto;
+}
+
+.about-image {
+    margin: 20px;
+    margin-left: 100px;
+    width: 40%;
+    height: auto;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.about-text {
+    max-width: 700px;
+    font-size: 30px;
+    font-weight: 350;
+    line-height: 2;
+    margin-top: 100px;
+}
+
+
+.rickroll {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.gear-image {
+    display: block;
+    width: 800px;
+    margin: 100px 100px;
+}
+
+.gear {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gear-text {
+    font-size: 30px;
+    font-weight: 350;
+    line-height: 2;
+    margin-top: 200px;
+}
+
+#lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.gallery img {
+    transition: transform .3s ease;
+    cursor: zoom-in;
+}
+
+.gallery img:hover {
+    transform: scale(1.02);
+}
+
+.logo:hover {
+    text-decoration: none;
+}
+
+
+@media (max-width: 900px) {
+
+    .bar {
+        gap: 25px;
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin: 0;
+    }
+
+    .gallery img {
+        width: 100%;
+    }
+
+    .about,
+    .gear {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-image,
+    .gear-image {
+        width: 90%;
+        margin: 20px;
+    }
+
+    .about-text,
+    .gear-text {
+        margin: 20px;
+        font-size: 22px;
+        max-width: 90%;
+    }
+
+    #dont-contact {
+        font-size: 28px;
+        text-align: center;
+        padding: 20px;
+    }
+}
